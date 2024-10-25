@@ -33,7 +33,7 @@ function OurWork() {
     <div className="our-work">
       <div className="our-work-grid">
         <div className="our-work-title">
-          Our {" "}<span className="gradient-text-our-work">WORK</span>
+          Our <span className="gradient-text-our-work">WORK</span>
         </div>
         <div className="our-work-description">
           Excited to work together on your next project?

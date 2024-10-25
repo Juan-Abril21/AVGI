@@ -1,0 +1,445 @@
+.team {
+  display: grid;
+  grid-template-areas:
+    "title large-photo description"
+    "small-photo large-photo description";
+  grid-template-columns: 300px 400px 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.mision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+  min-height: 426px;
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+  min-width: 1400px;
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.mision-text {
+  grid-template-columns: span 2;
+  align-self: center;
+  text-align: end;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-left: 2rem;
+  margin-right: 4rem;
+  font-family: "Urbanist", sans-serif;
+
+}
+
+.vision-text {
+  grid-template-columns: span 2;
+  align-self: center;
+  text-align: start;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-left: 2rem;
+  margin-right: 7rem;
+  font-family: "Urbanist", sans-serif;
+
+}
+
+.mision-image {
+  overflow: hidden;
+  position: relative;
+}
+
+.mision-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    #ffffff 0%,
+    rgba(182, 182, 182, 0.9) 30%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 1;
+}
+
+.mision-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; 
+}
+
+.card-team {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.title {
+  grid-area: title;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 1rem;
+  font-family: "Urbanist", sans-serif;
+  text-align: center;
+}
+
+.gradient-text-our-team {
+  background: linear-gradient(90deg, #ff69b4 0%, #ff69b4 30%, #00bfff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-text-our-mision {
+  background: linear-gradient(90deg, #56ee58 0%, #06c7f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.gradient-text-our-vision {
+  background: linear-gradient(90deg, #549ece 0%, #e4598f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.background1-team {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.background2-team {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.person1-team {
+  position: relative;
+  transition: opacity 0.3s ease-in-out;
+  height: 100%;
+}
+
+.person2-team {
+  position: relative;
+  transition: opacity 0.3s ease-in-out;
+  height: 100%;
+}
+
+.small-photo {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  max-height: 370px;
+}
+
+.large-photo {
+  grid-area: large-photo;
+  aspect-ratio: 3/4;
+  grid-column: 2;
+  grid-row: span 2;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.description {
+  grid-area: description;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Urbanist", sans-serif;
+}
+
+.navigation-buttons {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rem;
+  z-index: 5;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.nav-button.left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+.nav-button.right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.quote-mark {
+  font-size: 6rem;
+  line-height: 1;
+  color: #ddd;
+  font-family: serif;
+  position: absolute;
+  top: 8rem;
+  left: 1rem;
+}
+
+.description-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.member-name {
+  color: #4361ee;
+  font-weight: 600;
+}
+
+.member-position {
+  color: #333;
+}
+
+.card-connector-team1-vertical {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 205.7px;
+  width: 5.63px;
+  height: 533px;
+  background: linear-gradient(to bottom, #ff69b4, #21d7b7);
+  z-index: -2;
+  transform: translateX(-2rem);
+}
+
+.card-connector-mision1-vertical {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 1080px;
+  width: 5.63px;
+  height: 525px;
+  background: linear-gradient(to bottom, #e9e531, #21d7b7);
+  z-index: -2;
+  transform: translateX(-2rem);
+}
+
+.card-connector-vision1-vertical {
+  content: "";
+  position: absolute;
+  top: -35px;
+  left: 497px;
+  width: 5.63px;
+  height: 458px;
+  background: linear-gradient(to bottom, #e9e531, #21d7b7);
+  z-index: -2;
+  transform: translateX(-2rem);
+}
+
+.card-connector-team1-horizontal {
+  content: "";
+  position: absolute;
+  top: 105%;
+  left: 174px;
+  width: 880px;
+  height: 6px;
+  background: linear-gradient(to right, #30df99, #e9e531);
+  z-index: -1;
+}
+
+.card-connector-mision1-horizontal {
+  content: "";
+  position: absolute;
+  top: 470px;
+  left: 466px;
+  width: 587px;
+  height: 6px;
+  background: linear-gradient(to left, #21d7b7, #e9e531);
+  z-index: -1;
+}
+
+.card-connector-vision1-horizontal {
+  content: "";
+  position: absolute;
+  top: 118%;
+  left: 33.3%;
+  width: 59vw;
+  height: 6px;
+  background: linear-gradient(to right, #21d7b7, #e9e531);
+  z-index: 131321;
+}
+
+.mobile-photos-vision {
+  display: none;
+}
+
+
+@media (max-width: 1270px) {
+  .vision-text {
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: 400;
+    text-align: center;
+  }
+  .vision-image {
+    display: none;
+  }
+
+  .description-text {
+    text-align: center;
+  }
+
+  .mobile-photos-vision {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .background-vision-mobile {
+    position: relative;
+  }
+
+  .people-vision-mobile {
+    position: absolute;
+    width: 70vw;
+    max-width: 400px;
+  }
+
+  .vision-grid {
+    grid-template-columns: 1fr;
+    min-width: 0px;
+  }
+
+  .team {
+    grid-template-areas:
+      "title"
+      "large-photo"
+      "member-info"
+      "description";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 0rem;
+  }
+
+  .mision-grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 0rem;
+  }
+
+  .mision-image {
+    grid-row: 1;
+  }
+
+  .mision-text {
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .mision-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to top,
+      #ffffff 0%,
+      rgba(224, 224, 224, 0.9) 30%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 1;
+  }
+
+  .small-photo {
+    display: none;
+  }
+
+  .large-photo {
+    grid-area: large-photo;
+    max-height: none;
+    aspect-ratio: 3/4;
+    width: 100%;
+    max-width: 60%;
+    margin: 0 auto;
+    order: 2;
+  }
+
+  .member-info {
+    grid-area: member-info;
+    text-align: center;
+    padding: 0.5rem;
+    order: 3;
+  }
+
+  .description {
+    grid-area: description;
+    order: 4;
+  }
+
+  .quote-mark {
+    display: none;
+  }
+
+  .card-connector-team1-vertical,
+  .card-connector-mision1-vertical,
+  .card-connector-vision1-vertical,
+  .card-connector-team1-horizontal,
+  .card-connector-mision1-horizontal,
+  .card-connector-vision1-horizontal {
+    display: none;
+  }
+
+  .navigation-buttons {
+    margin-top: 50%;
+    gap: 70vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .navigation-buttons {
+    gap: 60vw;
+  }
+}
