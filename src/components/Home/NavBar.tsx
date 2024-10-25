@@ -141,7 +141,7 @@ function NavBar() {
           <IoMenu />
         </button>
       </nav>
-      <div className="linea-footer-navbar"></div>
+      
     </>
   );
 }

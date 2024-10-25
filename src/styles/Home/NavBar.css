@@ -11,6 +11,8 @@
   height: 80px;
   padding: 0 2rem;
   overflow: hidden;
+  width: 100%;
+  border-bottom: 1px solid black;
 }
 
 .navbar-logo img {

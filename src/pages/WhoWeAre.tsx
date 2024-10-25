@@ -2,6 +2,7 @@ import NavBar from "@/components/Home/NavBar";
 import Hook from "@/components/WoWeAre/Hook";
 import Purpose from "@/components/WoWeAre/Purpose";
 import Phrase from "@/components/WoWeAre/Phrase";
+import Team from "@/components/WoWeAre/Team";
 
 import Footer from "@/components/Home/Footer";
 import WorkinkgOn from "@/components/WorkingOn";
@@ -13,7 +14,7 @@ function WhoWeAre() {
       <Hook />
       <Purpose />
       <Phrase />
-      
+      <Team />
       <WorkinkgOn />
       <Footer />
     </>
