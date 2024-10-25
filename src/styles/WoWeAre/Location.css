@@ -1,0 +1,149 @@
+.location {
+  position: relative;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+
+.location-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  font-family: "Urbanist", sans-serif;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 4rem;
+}
+
+.location-img {
+  max-width: 500px;
+  display: flex;
+  justify-self: center;
+  width: 90vw;
+}
+
+.gradient-text-located {
+  background: linear-gradient(90deg, #e9e531 0%, #56ee58 50%, #30df99 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-going {
+  background: linear-gradient(90deg, #06c7f1 0%, #06c7f1 30%, #e4598f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.plan {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.plan-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  font-family: "Urbanist", sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.location-text {
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  font-weight: 400;
+  font-family: "Urbanist", sans-serif;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+.analize-title {
+  font-size: clamp(1.2rem, 2vw, 1.3rem);
+  font-weight: 700;
+  font-family: "Urbanist", sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.location-text2 {
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  font-weight: 400;
+  font-family: "Urbanist", sans-serif;
+  display: flex;
+  align-items: end;
+}
+
+.location-text3 {
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  font-weight: 400;
+  font-family: "Urbanist", sans-serif;
+  display: flex;
+  align-items: end;
+}
+
+.locations-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.locations-list li {
+  margin-bottom: 0.75rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.locations-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #30df99;
+}
+
+@media (max-width: 1270px) {
+    .location {
+        margin-top: 0rem;
+    }
+
+
+}
+
+@media (max-width: 900px) {
+  .location {
+    margin-top: 0rem;
+  }
+  .location-grid {
+    grid-template-columns: 1fr;
+    gap: 0rem;
+  }
+
+  .location {
+    padding: 2rem 1rem;
+  }
+
+  .location-text {
+    max-width: 100%;
+  }
+  .analize-title {
+    margin-bottom: 0rem;
+    text-align: start;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .location-text2 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .location-text3 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
