@@ -96,7 +96,7 @@
   overflow: hidden;
 }
 
-.title {
+.card-team.title {
   grid-area: title;
   font-size: 3rem;
   font-weight: 700;
@@ -304,7 +304,7 @@
   width: 59vw;
   height: 6px;
   background: linear-gradient(to right, #21d7b7, #e9e531);
-  z-index: 131321;
+  z-index: -1;
 }
 
 .mobile-photos-vision {
@@ -346,6 +346,7 @@
   .vision-grid {
     grid-template-columns: 1fr;
     min-width: 0px;
+    margin-bottom: 0rem;
   }
 
   .team {
