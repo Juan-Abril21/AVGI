@@ -1,0 +1,109 @@
+.FAQ {
+  position: relative;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.FAQ-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  font-family: "Urbanist", sans-serif;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 4rem;
+}
+
+.FAQ-subtitle {
+  font-size: clamp(1.2rem, 2vw, 3.5rem);
+  font-weight: 400;
+  font-family: "Urbanist", sans-serif;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.information-button {
+  display: flex;
+  justify-content: flex-end;
+  min-width: max-content;
+}
+
+.btnInformation {
+  width: clamp(100px, 8vw, 150px);
+  height: 6vh;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  width: 12vw;
+  min-width: 150px;
+}
+
+.btnInformation {
+  color: #eeeeee;
+  background-color: #101623;
+}
+
+.btnInformation::after {
+  content: "";
+  position: absolute;
+  height: 107%;
+  width: 102%;
+  border-radius: 7px;
+  background: linear-gradient(
+    -145.587deg,
+    #e4598f 0%,
+    #a773a8 14%,
+    #549ece 30%,
+    #06c7f1 48%,
+    #30df99 65%,
+    #56ee58 82%,
+    #e9e531 100%
+  );
+  z-index: -1;
+}
+
+.gradient-text-FAQ {
+  background: linear-gradient(
+    90deg,
+    #a773a8 0%,
+    #e4598f 13%,
+    #549ece 37%,
+    #06c7f1 50%,
+    #30df99 63%,
+    #e9e531 87%,
+    #56ee58 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+@media (max-width: 800px) {
+  .FAQ {
+    margin-top: 0rem;
+    padding-top: 2rem;
+  }
+  .FAQ-subtitle {
+    margin-bottom: 1rem;
+  }
+  .FAQ-title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    font-family: "Urbanist", sans-serif;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+}
