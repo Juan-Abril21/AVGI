@@ -1,0 +1,331 @@
+.plans {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  padding-top: 70px;
+}
+
+.plans-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  font-family: "Urbanist", sans-serif;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  justify-items: center;
+}
+
+.plans-title2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  font-family: "Urbanist", sans-serif;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  justify-items: center;
+}
+
+.plans-desc {
+  font-size: clamp(1rem, 1.2vw, 3.5rem);
+  text-align: center;
+  font-family: "Urbanist", sans-serif;
+}
+
+.gradient-text-plan {
+  background: linear-gradient(90deg, #56ee58 0%, #06c7f1 50%, #a773a8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.plans-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.cardPlan {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  min-height: 550px;
+  padding: 1.5rem;
+  border: none;
+  z-index: 1;
+}
+
+.cardPlan::before {
+  display: none;
+  content: "";
+  position: absolute;
+  height: 101%;
+  width: 102%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  background: linear-gradient(
+    -145.587deg,
+    #e4598f 0%,
+    #a773a8 14%,
+    #549ece 30%,
+    #06c7f1 48%,
+    #30df99 65%,
+    #56ee58 82%,
+    #e9e531 100%
+  );
+  z-index: -2;
+}
+
+.cardPlan::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background: white;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+.cardPlan:hover::before {
+  display: block;
+}
+
+.cardPlan > * {
+  z-index: 1;
+}
+
+.plan-type-desc {
+  text-align: left;
+}
+
+.tarjet-price {
+  display: flex;
+}
+
+.btnPlan {
+  width: 100%;
+  height: 5vh;
+  min-height: 30px;
+  max-height: 40px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  padding: 0 1rem;
+  color: #eeeeee;
+  background-color: transparent;
+  margin-top: auto;
+  overflow: hidden;
+}
+
+.btnPlan::before {
+  content: "";
+  position: absolute;
+  height: 107%;
+  width: 107%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 7px;
+  background: linear-gradient(
+    -145.587deg,
+    #e4598f 0%,
+    #a773a8 14%,
+    #549ece 30%,
+    #06c7f1 48%,
+    #30df99 65%,
+    #56ee58 82%,
+    #e9e531 100%
+  );
+  z-index: -1;
+}
+
+.btnPlan::after {
+  content: "";
+  position: absolute;
+  height: 92%;
+  width: 98%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background-color: #101623;
+  z-index: -1;
+}
+
+.tarjet-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.most-popular {
+  position: absolute;
+  border: 1px solid;
+  display: flex;
+  align-self: flex-end;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  width: clamp(6rem, 8vw, 7rem);
+  height: clamp(1rem, 3vh, 2rem);
+  font-size: clamp(0.5rem, 0.7vw, 0.6rem);
+  border-radius: 20px;
+  background: linear-gradient(180deg, #000000 0%, #2c3089 70%, #663399 100%);
+}
+
+.plan-price {
+  margin-top: 2rem;
+  font-weight: 650;
+  font-size: clamp(1.5rem, 2.2vw, 3.5rem);
+}
+
+.plan-time {
+  color: grey;
+  font-size: clamp(1rem, 1.5vw, 3.5rem);
+  font-family: "Roboto", sans-serif;
+}
+
+.plan-type {
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1.5rem, 2vw, 3.5rem);
+}
+
+.plan-type-desc {
+  font-family: "Roboto", sans-serif;
+}
+
+.info-container-plans {
+  display: flex;
+  flex-direction: row;
+}
+
+.check-img {
+  width: 20px;
+  height: 20px;
+}
+
+.desktop-cards {
+  display: flex;
+  gap: 3rem;
+}
+
+.mobile-card {
+  display: none;
+}
+
+.type-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.trail-point-plan {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(145.587deg, #e9e531 0%, #56ee58 100%);
+  pointer-events: none;
+  filter: blur(40px);
+  animation: fadeOut 2s forwards;
+}
+
+.plan-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  margin-top: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav-arrow-plan {
+  display: none;
+}
+
+.plan-text {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .plans {
+    padding-top: 110px;
+  }
+
+  .desktop-cards {
+    display: none;
+  }
+
+  .mobile-card {
+    display: block;
+  }
+
+  .navigationMenuPlans {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-arrow-plan {
+    display: block;
+  }
+
+  .nav-arrow-plan.left-arrow {
+    position: absolute;
+    left: 0;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
+  .nav-arrow-plan.right-arrow {
+    position: absolute;
+    right: 0;
+    transform: translateX(50%);
+    z-index: 10;
+  }
+
+  .plans-title2 {
+    display: none;
+  }
+
+  .plans-desc {
+    text-align: justify;
+  }
+
+  .plan-text {
+    display: block;
+  }
+
+  .cardPlan::before {
+    display: block;
+  }
+}
