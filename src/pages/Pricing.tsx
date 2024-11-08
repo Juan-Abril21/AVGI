@@ -2,7 +2,7 @@ import NavBar from "@/components/Home/NavBar";
 import Footer from "@/components/Home/Footer";
 import Testimonies from "@/components/Pricing/TestimoniesP";
 import Plans from "@/components/Pricing/Plans";
-import WorkinkgOn from "@/components/WorkingOn";
+import CTA from "@/components/Home/CTA";
 
 function Pricing() {
   return (
@@ -10,7 +10,7 @@ function Pricing() {
       <NavBar />
       <Testimonies />
       <Plans />
-      <WorkinkgOn />
+      <CTA />
       <Footer />
     </>
   );

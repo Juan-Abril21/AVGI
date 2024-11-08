@@ -59,7 +59,7 @@
 .btnLogin,
 .btnRegister {
   width: clamp(100px, 8vw, 150px);
-  height: 4vh;
+  height: clamp(5px, 8vw, 20px);
   min-height: 30px;
   max-height: 40px;
   border: none;
@@ -88,7 +88,7 @@
 .btnRegister::after {
   content: "";
   position: absolute;
-  height: 107%;
+  height: 105%;
   width: 102%;
   border-radius: 7px;
   background: linear-gradient(

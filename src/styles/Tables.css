@@ -1,0 +1,17 @@
+.table-mobile {
+  display: none;
+}
+
+.table-desktop {
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .table-mobile {
+    display: block;
+  }
+
+  .table-desktop {
+    display: none;
+  }
+}
