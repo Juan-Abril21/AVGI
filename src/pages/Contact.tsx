@@ -1,12 +1,12 @@
 import NavBar from "@/components/Home/NavBar";
+import WhatUThink from "@/components/Contact/WhatUThink";
 import Footer from "@/components/Home/Footer";
-import WorkinkgOn from "@/components/WorkingOn";
 
 function Contact() {
   return (
     <>
       <NavBar />
-      <WorkinkgOn />
+      <WhatUThink />
       <Footer />
     </>
   );
