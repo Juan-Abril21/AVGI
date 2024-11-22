@@ -1,5 +1,6 @@
 import NavBar from "@/components/Home/NavBar";
 import WhatUThink from "@/components/Contact/WhatUThink";
+import Forms from "@/components/Contact/Forms";
 import Footer from "@/components/Home/Footer";
 
 function Contact() {
@@ -7,6 +8,7 @@ function Contact() {
     <>
       <NavBar />
       <WhatUThink />
+      <Forms />
       <Footer />
     </>
   );

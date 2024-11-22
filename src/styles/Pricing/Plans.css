@@ -303,14 +303,14 @@
     position: absolute;
     left: 0;
     transform: translateX(-50%);
-    z-index: 10;
+    z-index: -1;
   }
 
   .nav-arrow-plan.right-arrow {
     position: absolute;
     right: 0;
     transform: translateX(50%);
-    z-index: 10;
+    z-index: -1;
   }
 
   .plans-title2 {
