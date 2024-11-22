@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import Login from "./pages/LogIn";
 import Register from "./pages/Register";
 import ScrollToTop from "./components/ScrollToTop";
+import Courses from "./pages/Courses";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/courses" element={<Courses />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
