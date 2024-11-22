@@ -1,0 +1,69 @@
+.logIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background: linear-gradient(90deg, #fee7a1 0%, #f4f6dd 50%, #90d7d1 100%);
+  padding-left: clamp(1rem, 3vw, 10rem);
+  padding-right: clamp(1rem, 3vw, 10rem);
+  padding-top: clamp(1rem, 3vw, 10rem);
+  height: 100%;
+}
+
+.forms-logIn {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: clamp(1rem, 2vw, 2rem);
+  padding: clamp(1rem, 3vw, 2rem);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 10;
+  border-radius: clamp(25px, 5vw, 50px);
+  width: 80%;
+  min-height: min-content;
+  max-height: 20vh;
+  overflow-y: auto;
+}
+
+.btnCreateLogIn {
+  width: 100%;
+  min-height: 40px;
+  height: clamp(40px, 5vh, 50px);
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  color: #eeeeee;
+  overflow: hidden;
+}
+
+.btnCreateLogIn::after {
+  content: "";
+  position: absolute;
+  height: 92%;
+  width: 98%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background-color: #101623;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .forms-logIn {
+    justify-self: center;
+    width: 100%;
+  }
+}
