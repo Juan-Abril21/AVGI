@@ -1,11 +1,9 @@
-import NavBar from "@/components/Home/NavBar";
-import WorkinkgOn from "@/components/WorkingOn";
+import SignUp from "@/components/SignUp/SignUp";
 
 function Register() {
   return (
     <>
-      <NavBar />
-      <WorkinkgOn />
+      <SignUp />
     </>
   );
 }
