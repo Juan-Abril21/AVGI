@@ -4,9 +4,22 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 1;
+  padding-bottom: 100px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 2rem;
+}
+
+.services::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-color: inherit;
+  z-index: -1;
 }
 
 .services-grid {
@@ -180,7 +193,6 @@
     padding: 1rem;
   }
 
-
   .services-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -268,7 +280,7 @@
   .mobile-service-details {
     overflow: hidden;
     padding: 0 1.5rem;
-    background: #2F353C;
+    background: #2f353c;
     border-radius: 0 0 20px 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
@@ -298,6 +310,4 @@
     font-family: "Urbanist", sans-serif;
     text-align: justify;
   }
-
-  
 }
