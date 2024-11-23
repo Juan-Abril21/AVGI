@@ -50,7 +50,7 @@ const testimonials: Testimony[] = [
   },
   {
     id: 5,
-    name: "Barreta’s Brothers",
+    name: "Barreta's Brothers",
     role: "Founders, Barreta",
     company: "Plumbing",
     content:
@@ -64,48 +64,64 @@ export default function Testimonials() {
   const { ref, isIntersecting } = useOnScreen({ threshold: 0.1 });
 
   return (
-    <div className="testimonials-container" ref={ref}
-    style={{
-      opacity: isIntersecting ? 1 : 0,
-      transform: isIntersecting ? "translateY(0)" : "translateY(20px)",
-      transition: "all 0.7s ease-in",
-    }}>
-      <div className="testimonial-content">
-        <img
-          src={testimonials[currentTestimonial].avatar}
-          alt={testimonials[currentTestimonial].name}
-          className="testimonial-main-avatar"
-        />
-        <p className="testimonial-text">
-          {testimonials[currentTestimonial].content}
-        </p>
-        <h3 className="testimonial-name">
-          {testimonials[currentTestimonial].name}
-        </h3>
-        <p className="testimonial-role">
-          {testimonials[currentTestimonial].role},{" "}
-          {testimonials[currentTestimonial].company}
-        </p>
-      </div>
+    <div 
+      className="testimonials-wrapper"
+      style={{
+        position: 'relative',
+        width: '100%',
+        background: 'linear-gradient(to bottom, #f8fafc, white)',
+        marginTop: '-100px',
+        paddingTop: '100px',
+      }}
+    >
+      <div 
+        className="testimonials-container" 
+        ref={ref}
+        style={{
+          opacity: isIntersecting ? 1 : 0,
+          transform: isIntersecting ? "translateY(0)" : "translateY(20px)",
+          transition: "opacity 0.5s ease-out, transform 0.5s ease-out",
+          position: 'relative',
+          zIndex: 2,
+        }}
+      >
+        <div className="testimonial-content">
+          <img
+            src={testimonials[currentTestimonial].avatar}
+            alt={testimonials[currentTestimonial].name}
+            className="testimonial-main-avatar"
+          />
+          <p className="testimonial-text">
+            {testimonials[currentTestimonial].content}
+          </p>
+          <h3 className="testimonial-name">
+            {testimonials[currentTestimonial].name}
+          </h3>
+          <p className="testimonial-role">
+            {testimonials[currentTestimonial].role},{" "}
+            {testimonials[currentTestimonial].company}
+          </p>
+        </div>
 
-      <div className="avatar-navigation">
-        {testimonials.map((testimony, index) => (
-          <button
-            key={testimony.id}
-            onClick={() => setCurrentTestimonial(index)}
-            className={`avatar-button ${
-              currentTestimonial === index ? "active" : ""
-            }`}
-          >
-            <img
-              src={testimony.avatar}
-              alt={testimony.name}
-              className="avatar-image"
-            />
-          </button>
-        ))}
+        <div className="avatar-navigation">
+          {testimonials.map((testimony, index) => (
+            <button
+              key={testimony.id}
+              onClick={() => setCurrentTestimonial(index)}
+              className={`avatar-button ${
+                currentTestimonial === index ? "active" : ""
+              }`}
+            >
+              <img
+                src={testimony.avatar}
+                alt={testimony.name}
+                className="avatar-image"
+              />
+            </button>
+          ))}
+        </div>
+        <div className="linea"></div>
       </div>
-      <div className="linea"></div>
     </div>
   );
 }
