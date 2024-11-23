@@ -3,6 +3,9 @@ import "../../styles/Home/Metrics.css";
 function Metrics() {
   return (
     <div className="metrics">
+      <div className="brain-img">
+        <img src="/brain-img.png"></img>
+      </div>
       <div className="card-connector-metrics1"></div>
       <div className="cardMetrics grid-item-1">
         We successfully transform 100% of our client's business operations and
