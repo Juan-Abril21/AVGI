@@ -1,5 +1,5 @@
 import "../../styles/Courses/Experts.css";
-import Carrusel from "../Courses/Courses-carousel";
+import Carrusel from "../Courses/Experts-carousel";
 
 const images = {
   topBand: [

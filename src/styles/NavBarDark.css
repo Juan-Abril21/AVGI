@@ -161,6 +161,7 @@
 
 @media (max-width: 800px) {
   .navbar-black {
+    padding: 0rem 0.5rem 0rem 0.5rem;
     position: fixed;
     height: 80px;
     width: 100%;
