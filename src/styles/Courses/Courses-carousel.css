@@ -1,150 +1,102 @@
-.carousel-container {
-  height: 55vh; /* Altura fija en lugar de 70vh */
+.vertical-card-carousel {
+  height: 530px;
+  
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  padding: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #2f353c #21252c;
+}
+
+.vertical-card-carousel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.vertical-card-carousel::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.vertical-card-carousel::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.carousel-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 1rem; /* Reducido de 1.5rem */
-  overflow: hidden;
-  width: 100%;
-  padding: 1rem; /* Reducido de 2rem */
 }
 
-.band-container {
+.carousel-card {
+  cursor: pointer;
   position: relative;
-  height: 300px; /* Altura fija en lugar de calc(75vh / 2 - 2rem) */
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.2s ease;
+  height: 150px;
   overflow: hidden;
-  width: 100%;
+  font-family: "Urbanist", sans-serif;
+  background: #101623;
+  z-index: 0;
+  padding: 0.2rem;
+  margin-bottom: 1.3rem;
+  max-width: 800px;
 }
 
-.band-container::before,
-.band-container::after {
+.carousel-card::after {
   content: "";
   position: absolute;
   top: 0;
-  bottom: 0;
-  width: 100px;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.band-container::before {
   left: 0;
-  background: linear-gradient(
-    to right,
-    rgba(19, 22, 28, 1) 0%,
-    rgba(19, 22, 28, 0.9) 30%,
-    rgba(19, 22, 28, 0) 100%
-  );
-}
-
-.band-container::after {
-  right: 0;
-  background: linear-gradient(
-    to left,
-    rgba(19, 22, 28, 1) 0%,
-    rgba(19, 22, 28, 0.9) 30%,
-    rgba(19, 22, 28, 0) 100%
-  );
-}
-
-.band-track-container {
-  display: flex;
-  gap: 1.5rem;
-  position: absolute;
-  height: 100%;
-  animation: scroll-left 30s linear infinite;
-}
-
-.band-track-container.reverse-container {
-  animation: scroll-right 30s linear infinite;
-}
-
-.carousel-item-container {
-  flex: 0 0 auto;
-  height: 100%;
-  aspect-ratio: 1/1;
-}
-
-.carousel-item-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
+  border-radius: 20px;
+  padding: 2px; 
+  background: linear-gradient(45deg, #ddda32, #2bb4e0, #26c192, #e4598f);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none; 
+  z-index: 1;
 }
 
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes scroll-right {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.mobile-carousel-container {
-  width: 100%;
-  max-width: 90vw;
-  overflow-x: auto;
-  overflow-y: hidden;
+.carousel-card > * {
   position: relative;
-  cursor: grab;
-  -webkit-overflow-scrolling: touch;
-  padding: 1rem 0;
-  height: auto;
-  max-height: 75vh;
-  max-height: none;
+  z-index: 2;
 }
 
-.mobile-track-container {
+.carousel-card:hover {
+  transform: scale(1.02);
+}
+
+.card-content {
   display: flex;
-  gap: 15px;
-  padding: 0 2rem;
-  width: max-content;
+  flex-direction: column;
 }
 
-.mobile-item-container {
-  flex: 0 0 auto;
-  height: auto;
-  aspect-ratio: 1/1;
-}
-
-.mobile-item-container img {
-  width: 100%;
-  height: 100%;
+.card-image {
+  width: 130px;
+  height: 140px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
-.mobile-carousel-container::-webkit-scrollbar {
-  display: none;
+.card-title {
+  text-align: start;
+  font-size: clamp(1rem, 2.3vw, 5rem);
+  font-weight: 700;
+  font-family: "Urbanist", sans-serif;
+  color: white;
+  margin-bottom: 1rem;
+  text-align: start;
 }
 
-.mobile-carousel-container {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-@media (max-width: 900px) {
-  .carousel-container-container {
-    display: none;
-  }
-}
-
-@media (max-width: 1000px) {
-  .mobile-item-container {
-    width: 75vw;
-  }
-
-  .mobile-track-container {
-    gap: 12px;
-  }
+.card-descriptionn {
+  text-align: center;
+  color: white;
+  font-size: 0.9em;
+  z-index: 165;
+  text-align: start;
 }

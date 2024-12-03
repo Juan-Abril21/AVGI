@@ -8,6 +8,8 @@ import Login from "./pages/LogIn";
 import Register from "./pages/Register";
 import ScrollToTop from "./components/ScrollToTop";
 import Courses from "./pages/Courses";
+import CourseDetail from "./pages/Course-detail";
+import Course from "./pages/course";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/courses/:slug" element={<CourseDetail />} />
+        <Route path="/course/:slug" element={<Course />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
