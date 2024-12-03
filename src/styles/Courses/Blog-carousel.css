@@ -1,0 +1,145 @@
+.testimonial-carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.testimonial-carousel {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.testimonial-scroll-container {
+  overflow-x: auto;
+  padding: 15px;
+  scrollbar-width: thin;
+  scrollbar-color: #2f353c #21252c;
+  width: 100%;
+}
+
+.testimonial-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.testimonial-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.testimonial-scroll-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.testimonial-bands-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: max-content;
+}
+
+.testimonial-band {
+  display: flex;
+  gap: 50px;
+  max-width: 1000px;
+}
+
+.testimonial-band.top-band {
+  margin-left: 10rem;
+}
+
+.testimonial-card {
+  flex: 0 0 500px;
+  background-color: #13161c;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 250px;
+  gap: 1rem;
+}
+
+.testimonial-author {
+  margin-bottom: 15px;
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-family: "Urbanist", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.author-date {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.testimonial-description {
+  flex-grow: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  color: white;
+  font-family: "Urbanist", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .testimonial-bands-wrapper {
+    gap: 40px;
+  }
+
+  .testimonial-band {
+    gap: 20px;
+  }
+
+  .testimonial-card {
+    flex: 0 0 calc(100vw - 60px);
+    max-width: calc(100vw - 60px);
+    min-height: 200px;
+    padding: 15px;
+  }
+
+  .author-name {
+    font-size: 20px;
+  }
+
+  .author-date {
+    font-size: 12px;
+  }
+
+  .testimonial-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    flex: 0 0 calc(100vw - 40px);
+    max-width: calc(100vw - 40px);
+    min-height: 180px;
+    padding: 10px;
+  }
+
+  .testimonial-bands-wrapper {
+    gap: 20px;
+  }
+
+  .testimonial-band {
+    gap: 15px;
+  }
+
+  .author-name {
+    font-size: 18px;
+  }
+
+  .testimonial-description {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
