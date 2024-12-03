@@ -1,0 +1,150 @@
+.carousel-container {
+  height: 55vh; /* Altura fija en lugar de 70vh */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem; /* Reducido de 1.5rem */
+  overflow: hidden;
+  width: 100%;
+  padding: 1rem; /* Reducido de 2rem */
+}
+
+.band-container {
+  position: relative;
+  height: 300px; /* Altura fija en lugar de calc(75vh / 2 - 2rem) */
+  overflow: hidden;
+  width: 100%;
+}
+
+.band-container::before,
+.band-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.band-container::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(19, 22, 28, 1) 0%,
+    rgba(19, 22, 28, 0.9) 30%,
+    rgba(19, 22, 28, 0) 100%
+  );
+}
+
+.band-container::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(19, 22, 28, 1) 0%,
+    rgba(19, 22, 28, 0.9) 30%,
+    rgba(19, 22, 28, 0) 100%
+  );
+}
+
+.band-track-container {
+  display: flex;
+  gap: 1.5rem;
+  position: absolute;
+  height: 100%;
+  animation: scroll-left 30s linear infinite;
+}
+
+.band-track-container.reverse-container {
+  animation: scroll-right 30s linear infinite;
+}
+
+.carousel-item-container {
+  flex: 0 0 auto;
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+
+.carousel-item-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.mobile-carousel-container {
+  width: 100%;
+  max-width: 90vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem 0;
+  height: auto;
+  max-height: 75vh;
+  max-height: none;
+}
+
+.mobile-track-container {
+  display: flex;
+  gap: 15px;
+  padding: 0 2rem;
+  width: max-content;
+}
+
+.mobile-item-container {
+  flex: 0 0 auto;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+
+.mobile-item-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.mobile-carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.mobile-carousel-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (max-width: 900px) {
+  .carousel-container-container {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .mobile-item-container {
+    width: 75vw;
+  }
+
+  .mobile-track-container {
+    gap: 12px;
+  }
+}
