@@ -1,0 +1,33 @@
+.custom-scrollbar {
+  overflow-y: scroll; /* Cambia de auto a scroll */
+  height: 100vh; /* O una altura específica que force el scrollbar */
+  max-height: 100vh;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #2f353c;        
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #21252c;    
+  border-radius: 20px;      
+  border: 3px solid #21252c; 
+}
+
+/* Aplica fondo oscuro solo al body cuando está en Courses */
+body.courses-page {
+  background-color: #13161C; /* Fondo oscuro */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Evita desplazamiento horizontal */
+}
+
+html.courses-page {
+  background-color: #13161C;
+  height: 100%;
+}

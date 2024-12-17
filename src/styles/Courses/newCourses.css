@@ -1,0 +1,144 @@
+.newCourses {
+  display: flex;
+  flex-direction: column;
+  background-color: #13161c;
+  justify-content: center;
+  padding: 5rem;
+  padding-top: 0rem;
+  overflow: hidden;
+}
+
+.title-newCourses {
+  text-align: start;
+  font-size: clamp(2rem, 2vw, 5rem);
+  font-weight: 700;
+  font-family: "Urbanist", sans-serif;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.subtitle-newCourses {
+  text-align: start;
+  font-size: clamp(1.3rem, 2vw, 5rem);
+  font-weight: 500;
+  font-family: "Urbanist", sans-serif;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.cardsNewCourses-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  position: relative;
+}
+
+.cardNewCourses {
+  flex: 0 0 250px;
+  padding: 0px;
+  background: #2f353c;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0.6;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  min-height: 350px;
+  min-width: 320px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.cardNewCourses::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  padding: 2px; 
+  background: linear-gradient(45deg, #ddda32, #2bb4e0, #26c192, #e4598f);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none; 
+  z-index: 1;
+}
+
+.card-buttons-newCourses {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding-bottom: 1rem;
+  gap: 1.5rem;
+}
+
+.cardNewCourses.focused {
+  flex: 0 0 320px;
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  z-index: 0;
+}
+
+.newCourse-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.cardNewCourses:not(.focused) .newCourse-img {
+  filter: brightness(0.6);
+}
+
+.title-newCourse {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 1rem;
+  text-align: start;
+  font-size: clamp(1rem, 1.5vw, 5rem);
+  font-weight: 700;
+  font-family: "Urbanist", sans-serif;
+  color: white;
+}
+
+.desc-newCourse {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  text-align: start;
+  font-size: clamp(1rem, 1vw, 5rem);
+  font-weight: 500;
+  font-family: "Urbanist", sans-serif;
+  color: white;
+}
+
+.navigation {
+  margin-top: 20px;
+  align-self: center;
+}
+
+.navigation button {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  border-radius: 50px;
+}
+
+.navigation button:hover {
+  background: #2f353c;
+}
+
+@media (max-width: 900px) {
+  .newCourses {
+    padding: 2.5rem;
+  }
+}
