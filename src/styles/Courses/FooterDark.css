@@ -1,4 +1,4 @@
-.footer {
+.footerDark {
   min-height: 270px;
   display: flex;
   flex-direction: column;
@@ -7,8 +7,9 @@
   position: relative;
   max-width: 1200px;
   margin: auto;
-  margin-top: 2rem;
   padding: 0rem 4rem;
+  padding-top: 2rem;
+  background-color: #13161c;
 }
 
 .footer-container {
@@ -32,17 +33,36 @@
   justify-self: center;
 }
 
-.terms-container {
+.terms-containerDark {
   display: flex;
   min-height: 10px;
-  padding: 0rem 4rem;
-  margin-top: 0.2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #13161c;
 }
 
-.terms-grid {
+.terms-gridDark {
   display: grid;
   grid-template-columns: auto 1fr;
-  width: 90vw;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #13161c;
+}
+
+.developedDark {
+  text-align: center;
+}
+
+.termsDark {
+  text-align: center;
+}
+
+.privacyDark {
+  text-align: center;
 }
 
 .rights-container {
@@ -50,6 +70,7 @@
   flex-direction: row;
   grid-column: 2;
   justify-content: flex-end;
+  gap: 1rem;
 }
 
 .rightsDark {
@@ -77,6 +98,7 @@
 .company-descriptionDark {
   color: #ffffff;
   font-size: 0.95rem;
+  text-align: center;
 }
 
 .social-iconsDark {
@@ -171,18 +193,28 @@
   font-size: 1rem;
 }
 
-@media (max-width: 800px) {
-  .footer {
-    padding: 2rem 2rem;
+@media (max-width: 700px) {
+  .footerDark {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-  .terms-container {
+  .terms-containerDark {
     width: 100%;
     padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
   }
-  .terms-grid {
+  .terms-gridDark {
     grid-template-columns: 1fr;
     width: 100%;
     gap: 1rem;
+    min-height: 10px;
+    padding-left: 0rem;
+  }
+  .section-title-aboutDark {
+    margin-left: 0rem;
   }
   .terms {
     text-align: center;
@@ -202,6 +234,7 @@
     flex-direction: column;
     text-align: start;
     gap: 0rem;
+    margin-left: 0rem;
   }
 
   .contact-info {
@@ -219,6 +252,10 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+  .lineaFooterDark {
+    border-bottom: 1px solid white;
+    width: 100%;
+  }
 
   .social-icons {
     display: none;
@@ -232,6 +269,7 @@
 
   .footer-container {
     grid-template-columns: 1fr;
+    margin-left: 0rem;
   }
   .logo-container {
     max-width: 250px;
