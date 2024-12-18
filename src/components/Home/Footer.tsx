@@ -110,9 +110,11 @@ const Footer = () => {
         </div>
       </footer>
       <div className="lineaFooter"></div>
-      <div className="terms-container">
-        <div className="terms-grid">
-          <div className="rights">©2024 AVGI Group. All rights reserved</div>
+      <div className="terms-containerLightt">
+        <div className="terms-gridLight">
+          <div className="rights">
+            ©2024 AVGI Group. All rights reserved
+          </div>
           <div className="rights-container">
             <div className="terms">
               <Link to="/">Terms & Conditions</Link>
@@ -120,12 +122,15 @@ const Footer = () => {
             <div className="privacy">
               <Link to="/">Privacy & Policy</Link>
             </div>
-            <a
-              className="developed"
-              href="https://webelopers.io/#home"
-              target="_blank"
-            >
-              Developed by <a className="gradient-developed">WEBELOPERS</a>
+            <a className="developed">
+              Developed by{" "}
+              <a
+                className="gradient-developed"
+                href="https://webelopers.io/#home"
+                target="_blank"
+              >
+                WEBELOPERS
+              </a>
             </a>
           </div>
         </div>

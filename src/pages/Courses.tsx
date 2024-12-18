@@ -17,14 +17,14 @@ function Courses() {
   }, []);
 
   return (
-    <div className="custom-scrollbar">
+    <>
       <NavBarDark />
       <Experts />
       <CoursesList />
       <Blog />
       <NewCourses />
       <FooterDark />
-    </div>
+    </>
   );
 }
 
