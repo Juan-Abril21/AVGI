@@ -1,5 +1,5 @@
 .footer {
-  min-height: 300px;
+  min-height: 270px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,32 +20,42 @@
   margin-bottom: 2rem;
 }
 
-.linea-footer-navbar{
-  border-bottom: 1px solid black;
+.linea-footer-navbarDark {
+  border-bottom: 1px solid white;
   width: 100%;
 }
 
+.lineaFooterDark {
+  border-bottom: 1px solid white;
+  width: 91%;
+  align-self: center;
+  justify-self: center;
+}
+
 .terms-container {
-  min-height: 30px;
-  width: 100%;
   display: flex;
-  flex-direction: column;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  min-height: 10px;
+  padding: 0rem 4rem;
+  margin-top: 0.2rem;
 }
 
 .terms-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-columns: auto 1fr;
+  width: 90vw;
 }
 
 .rights-container {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
   grid-column: 2;
-  justify-content: end;
+  justify-content: flex-end;
+}
+
+.rightsDark {
+  grid-column: 1;
+  color: #8e8ca1;
+  text-align: left;
 }
 
 .logo-section {
@@ -64,21 +74,21 @@
   height: auto;
 }
 
-.company-description {
-  color: #4a5568;
+.company-descriptionDark {
+  color: #ffffff;
   font-size: 0.95rem;
 }
 
-.social-icons {
+.social-iconsDark {
   display: flex;
   gap: 1rem;
   margin-top: 0.5rem;
 }
 
-.social-icons svg {
+.social-iconsDark svg {
   width: 1.5rem;
   height: 1.5rem;
-  color: #4a5568;
+  color: #ffffff;
   cursor: pointer;
   transition: color 0.3s ease;
 }
@@ -94,30 +104,27 @@
   justify-self: center;
 }
 
-.section-title {
+.section-titleDark {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1a202c;
+  color: #ffffff;
 }
 
-.gradient-developed {
+.gradient-developedDark {
   font-weight: 700;
-  background: linear-gradient(145.587deg, #bb88fd 0%, #000000 100%);
+  background: linear-gradient(145.587deg, #bb88fd 0%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.lineaFooter{
-  border-bottom: 1px solid black;
-  width: 91%;
-  align-self: center;
-  justify-self: center;
+.developedDark {
+  color: #8e8ca1;
 }
 
-.section-title-about {
+.section-title-aboutDark {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1a202c;
+  color: #ffffff;
   margin-left: 4rem;
 }
 
@@ -128,9 +135,13 @@
   margin-left: 4rem;
 }
 
-.contact-item {
-  color: #4a5568;
+.contact-itemDark {
+  color: #ffffff;
   font-size: 0.95rem;
+}
+
+.termsDark {
+  color: #8e8ca1;
 }
 
 .contact-label {
@@ -143,8 +154,12 @@
   gap: 1rem;
 }
 
-.nav-link-footer {
-  color: #4a5568;
+.privacyDark {
+  color: #8e8ca1;
+}
+
+.nav-link-footerDark {
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;
   font-size: 0.95rem;
@@ -162,28 +177,31 @@
   }
   .terms-container {
     width: 100%;
+    padding-left: 1rem;
   }
   .terms-grid {
     grid-template-columns: 1fr;
     width: 100%;
     gap: 1rem;
   }
-  .terms{
+  .terms {
     text-align: center;
   }
   .rights {
     text-align: center;
   }
-  .privacy{
+  .privacy {
     text-align: center;
   }
-  .developed{
+  .developed {
     text-align: center;
   }
   .rights-container {
     width: 100%;
-    justify-content: center;
     grid-column: auto;
+    flex-direction: column;
+    text-align: start;
+    gap: 0rem;
   }
 
   .contact-info {
