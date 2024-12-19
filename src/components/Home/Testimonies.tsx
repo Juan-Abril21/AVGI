@@ -80,7 +80,7 @@ export default function Testimonials() {
         style={{
           opacity: isIntersecting ? 1 : 0,
           transform: isIntersecting ? "translateY(0)" : "translateY(20px)",
-          transition: "opacity 0.5s ease-out, transform 0.5s ease-out",
+
           position: 'relative',
           zIndex: 2,
         }}

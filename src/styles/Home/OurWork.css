@@ -11,9 +11,7 @@
   background-color: #2f353c;
   position: relative;
   border: none;
-  opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out, background-color 0.5s ease-out;
   padding-bottom: 100px;
 }
 

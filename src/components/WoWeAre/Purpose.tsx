@@ -2,7 +2,7 @@ import "../../styles/WoWeAre/Purpose.css";
 import { useOnScreen } from "../UseOnScreen";
 
 function Purpose() {
-  const { ref, isIntersecting } = useOnScreen({ threshold: 0.1 });
+  const { ref, isIntersecting } = useOnScreen({});
   return (
     <div
       className="purpose"
@@ -10,7 +10,6 @@ function Purpose() {
       style={{
         opacity: isIntersecting ? 1 : 0,
         transform: isIntersecting ? "translateY(0)" : "translateY(20px)",
-        transition: "all 0.7s ease-out",
       }}
     >
       <div className="purpose-text ">

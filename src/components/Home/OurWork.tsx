@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import "../../styles/Home/OurWork.css";
 import Carrusel from "../../components/Home/Work-carousel.tsx";
 
@@ -30,33 +29,9 @@ const images = {
 };
 
 function OurWork() {
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      },
-      {
-        threshold: 0.1
-      }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
 
   return (
-    <div className="our-work" ref={sectionRef}>
+    <div className="our-work">
       <div className="our-work-grid">
         <div className="our-work-title">
           Our <span className="gradient-text-our-work">WORK</span>
