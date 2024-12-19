@@ -12,7 +12,6 @@ const CTA: React.FC = () => {
     const [trails, setTrails] = useState<TrailPoint[]>([]);
     const requestRef = useRef<number>();
     const previousTimeRef = useRef<number>();
-    const [isVisible, setIsVisible] = useState(false);
     const ctaRef = useRef<HTMLDivElement>(null);
   
     const animate = (time: number) => {
@@ -29,27 +28,6 @@ const CTA: React.FC = () => {
       previousTimeRef.current = time;
       requestRef.current = requestAnimationFrame(animate);
     };
-  
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-          }
-        },
-        { threshold: 0.1 } 
-      );
-  
-      if (ctaRef.current) {
-        observer.observe(ctaRef.current);
-      }
-  
-      return () => {
-        if (ctaRef.current) {
-          observer.unobserve(ctaRef.current);
-        }
-      };
-    }, []);
   
     useEffect(() => {
       requestRef.current = requestAnimationFrame(animate);
@@ -77,7 +55,7 @@ const CTA: React.FC = () => {
     };
   return (
     <div 
-    className={`CTA ${isVisible ? 'visible' : ''}`}
+    className={`CTA 'visible' : ''}`}
       onMouseMove={handleMouseMove}
       ref={ctaRef}
     >

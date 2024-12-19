@@ -2,7 +2,7 @@ import { useOnScreen } from "../UseOnScreen";
 import "../../styles/WoWeAre/Hook.css";
 
 function Hook() {
-  const { ref, isIntersecting } = useOnScreen({ threshold: 0.1 });
+  const { ref, isIntersecting } = useOnScreen({});
 
   return (
     <div className="hook">
@@ -19,7 +19,6 @@ function Hook() {
           style={{
             opacity: isIntersecting ? 1 : 0,
             transform: isIntersecting ? "translateY(0)" : "translateY(20px)",
-            transition: "all 0.5s ease-out",
           }}
         >
           We are the largest
@@ -32,7 +31,6 @@ function Hook() {
           style={{
             opacity: isIntersecting ? 1 : 0,
             transform: isIntersecting ? "translateY(0)" : "translateY(20px)",
-            transition: "all 2s ease-out",
           }}
         >
           <span className="gradient-text-hook">BUSINESS CONSULTING</span>
