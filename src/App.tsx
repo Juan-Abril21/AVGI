@@ -10,23 +10,48 @@ import ScrollToTop from "./components/ScrollToTop";
 import Courses from "./pages/Courses";
 import CourseDetail from "./pages/Course-detail";
 import Course from "./pages/course";
+import AuthProvider from "./context/AuthContext";
+import { ProtectedRoute } from "./components/ProtectedRoute";
 
 function App() {
   return (
     <>
-    <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/whoweare" element={<WhoWeAre />} />
-        <Route path="/pricing" element={<Pricing />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/courses" element={<Courses />} />
-        <Route path="/courses/:slug" element={<CourseDetail />} />
-        <Route path="/course/:slug" element={<Course />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <ScrollToTop />
+      <AuthProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/whoweare" element={<WhoWeAre />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route 
+            path="/courses" 
+            element={
+              <ProtectedRoute>
+                <Courses />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/courses/:slug" 
+            element={
+              <ProtectedRoute>
+                <CourseDetail />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/course/:slug" 
+            element={
+              <ProtectedRoute>
+                <Course />
+              </ProtectedRoute>
+            } 
+          />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </AuthProvider>
     </>
   );
 }

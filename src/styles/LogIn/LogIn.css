@@ -102,6 +102,17 @@
   color: #898989;
 }
 
+.password-input input[type="password"]::-ms-reveal,
+.password-input input[type="password"]::-ms-clear,
+.password-input input[type="password"]::-webkit-credentials-auto-fill-button {
+  display: none !important;
+}
+
+/* Para Firefox */
+.password-input input[type="password"] {
+  -webkit-text-security: disc !important;
+}
+
 .password-toggle {
   position: absolute;
   right: 16px;
@@ -111,6 +122,7 @@
   display: flex;
   align-items: center;
   color: #898989;
+  z-index: 2; 
 }
 
 .password-toggle .icon {

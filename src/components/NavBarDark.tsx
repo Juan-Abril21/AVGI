@@ -2,10 +2,25 @@ import { Link, useLocation } from "react-router-dom";
 import { IoMenu, IoClose } from "react-icons/io5";
 import { useState, useEffect } from "react";
 import "../styles/NavBarDark.css";
+import { useAuth } from "@/context/AuthContext";
 
 function NavBarDark() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const { logout, user } = useAuth();
+
+  console.log(user);
+  const handleLogout = async () => {
+    try {
+      await logout();
+    } catch (error) {
+      if (error instanceof Error) {
+        console.error(error.message);
+      } else {
+        console.error(error);
+      }
+    }
+  };
 
   useEffect(() => {
     setMenuOpen(false);
@@ -80,7 +95,7 @@ function NavBarDark() {
             <Link to="/" className="btnLogin">
               Profile
             </Link>
-            <Link to="/login" className="btnRegister">
+            <Link to="/login" className="btnRegister" onClick={handleLogout}>
               Log Out
             </Link>
           </div>
@@ -129,7 +144,7 @@ function NavBarDark() {
         </ul>
 
         <div className="navbar-buttons desktop-buttons">
-          <p style={{color: "white"}}>profile photo</p>
+          <p className="logout" style={{color: "white"}} onClick={handleLogout}>logout</p>
         </div>
 
         <button className="menu-icon-courses" onClick={toggleMenu}>
